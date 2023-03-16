@@ -1,7 +1,8 @@
 import urllib3
 import re
 
-from src.db.db import funs_db
+# 已完成 拿到数据所有基金数据
+# done
 
 
 def get_rsp(url):
@@ -23,15 +24,3 @@ def eval_to_list(pattern, data):
 def write_data(local, data):
     f = open(local, "w")
     f.write(data)
-
-
-get_db = funs_db("127.0.0.1","root","123456","zrq_shop")
-
-# pattern = r'\[\[(.*?)\]\]'
-#
-# get_data = get_rsp("https://fund.eastmoney.com/js/fundcode_search.js")
-#
-# list_data = list(eval_to_list(pattern, get_data))
-#
-#
-# print(list_data)
