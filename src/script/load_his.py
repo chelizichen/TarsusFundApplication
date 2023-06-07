@@ -1,11 +1,3 @@
-import pandas as pd
-import requests
-
-from src.db.db import funs_db
-
-get_db = funs_db("127.0.0.1", "root", "123456", "fundsus")
-
-
 def get_sql():
     return "insert into fund_his(" \
            "`fund_code`," \
@@ -92,16 +84,3 @@ def get_fund_k_history(fund_code: str, pz: int = 40000) -> pd.DataFrame:
     df['日期'] = pd.to_datetime(df['日期'], errors='coerce')
     return df
 
-
-# 6 位基金代码
-# fund_code = '161725'
-
-# 调用函数获取基金历史净值数据
-# fund_data = get_fund_k_history(fund_code)
-
-
-
-# # 将数据存储到表格文件中
-# fund_data.to_csv(f'{fund_code}.csv', index=None, encoding='utf-8-sig')
-
-# print(f'基金 {fund_code} 的历史净值数据已存储到文件 {fund_code}.csv 中！')
