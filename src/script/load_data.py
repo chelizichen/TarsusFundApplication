@@ -1,10 +1,10 @@
 import os
 
-from src.db.db import funs_db
+from src.db.db import funs_db, get_db
 
 # done
 
-get_db = funs_db("127.0.0.1", "root", "123456", "fundsus")
+
 root_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 
 target_path = os.path.normpath(root_directory + '/fund_list.txt')

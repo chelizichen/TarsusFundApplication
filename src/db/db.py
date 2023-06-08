@@ -30,4 +30,4 @@ class funs_db:
         self.cursor.execute(sql, args)
         self.db.commit()
 
-DBPool = funs_db("127.0.0.1", "root", "123456", "fundsus")
+get_db = funs_db("127.0.0.1", "root", "123456", "fundsus")
